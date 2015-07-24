@@ -1,0 +1,18 @@
+<h1>ひとりったー</h1>
+<p>ひとりでつぶやく超シンプルアプリ</p>
+
+<%= form_for Age.new do |f| %>
+  <%= f.label :"つぶやく" %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
+
+<hr>
+
+<table>
+<% @tweets.each do |tweet| %>
+<tr>
+  <p><td><%= tweet.content %></td><td><%= tweet.created_at %></td></p>
+</tr>
+<% end %>
+</table>
